@@ -25,10 +25,12 @@
             transition: background-color 0.5s, transform 0.5s;
         }
         .heart {
-            font-size: 40px;
+            font-size: 24px;
             color: red;
             position: absolute;
-            transition: opacity 0.5s;
+            top: -15px; /* Đặt sát viền trên */
+            left: 50%;
+            transform: translateX(-50%);
         }
         .text {
             position: absolute;
@@ -49,16 +51,16 @@
         .open .message {
             display: block;
         }
-        .open .text, .open .heart {
-            opacity: 0; /* Ẩn trái tim và dòng chữ khi mở */
+        .open .text {
+            opacity: 0; /* Ẩn dòng chữ khi mở */
         }
     </style>
 </head>
 <body>
     <div class="envelope" onclick="openLetter()">
-        <p class="text">Hãy mở tớ ra đi haha</p>
         <div class="heart">❤️</div>
-        <div class="message">8/3 này anh mời Pía đi ăn tối với anh nhó </div>
+        <p class="text">Hãy mở tôi ra đi haha</p>
+        <div class="message">8/3 này anh mời Pía đi ăn tối với anh nhó</div>
     </div>
     <script>
         function openLetter() {
