@@ -15,38 +15,49 @@
         .envelope {
             width: 250px;
             height: 180px;
-            background: white;
+            background: black; /* Màu nền đen trước khi mở */
             border: 3px solid red; /* Viền đỏ */
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            transition: transform 0.5s;
+            transition: background-color 0.5s, transform 0.5s;
         }
-        .envelope .text {
+        .heart {
+            font-size: 40px;
+            color: red;
+            position: absolute;
+            transition: opacity 0.5s;
+        }
+        .text {
             position: absolute;
             font-size: 16px;
-            color: black;
-            transition: opacity 0.3s;
+            color: white;
+            transition: opacity 0.5s;
         }
         .message {
             display: none;
             position: absolute;
             text-align: center;
             font-size: 16px;
+            color: black;
+        }
+        .open {
+            background: white; /* Đổi thành màu trắng khi mở */
         }
         .open .message {
             display: block;
         }
-        .open .text {
-            opacity: 0; /* Ẩn dòng chữ khi mở thư */
+        .open .text, .open .heart {
+            opacity: 0; /* Ẩn trái tim và dòng chữ khi mở */
         }
     </style>
 </head>
 <body>
     <div class="envelope" onclick="openLetter()">
-        <p class="text">hãy mở tôi ra đi haha</p>
+        <p class="text">hãy mở tớ ra đi haha</p>
+        <div class="heart">❤️</div>
         <div class="message">8/3 này anh mời Pía đi ăn tối với anh nhớ</div>
     </div>
     <script>
