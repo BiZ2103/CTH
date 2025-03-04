@@ -10,13 +10,13 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: white;
+            background-color: #ffe6e6; /* Nền màu hồng */
         }
         .envelope {
             width: 250px;
             height: 180px;
             background: white;
-            border: 3px solid pink;
+            border: 3px solid red; /* Viền đỏ */
             position: relative;
             display: flex;
             justify-content: center;
@@ -24,24 +24,23 @@
             cursor: pointer;
             transition: transform 0.5s;
         }
-        .envelope::before {
-            content: '\2665'; /* Trái tim */
-            font-size: 24px;
-            color: red;
+        .envelope .text {
             position: absolute;
-            bottom: -10px;
+            font-size: 16px;
+            color: black;
+            transition: opacity 0.3s;
         }
         .message {
             display: none;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             text-align: center;
             font-size: 16px;
         }
         .open .message {
             display: block;
+        }
+        .open .text {
+            opacity: 0; /* Ẩn dòng chữ khi mở thư */
         }
     </style>
 </head>
@@ -57,4 +56,3 @@
     </script>
 </body>
 </html>
-
